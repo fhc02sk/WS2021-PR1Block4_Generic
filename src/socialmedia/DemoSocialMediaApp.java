@@ -4,6 +4,15 @@ public class DemoSocialMediaApp {
     // psvm
     public static void main(String[] args) {
 
+        int intValue = 47;
+        Integer integerValue = new Integer(47);
+        Integer integerValue2 = 48;
+
+        intValue = integerValue;
+        integerValue = intValue;
+
+        System.out.println("---------------------------------------------");
+
         Profil max = new Profil("Max@Muster.at", "Musterstraße 1", 39, 3_500);
         max.printProfil();
 

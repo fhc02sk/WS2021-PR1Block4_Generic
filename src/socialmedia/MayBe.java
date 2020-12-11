@@ -16,6 +16,8 @@ public class MayBe <T> {
 
     public MayBe(T value, int status) {
         this.value = value;
+        
+
         setStatus(status);
     }
 
