@@ -3,7 +3,9 @@ package socialmedia;
 public class Profil {
     private String username;
     private String address;
+
     private int age;
+
     private double salary;
     private Profil bestFriend;
 
