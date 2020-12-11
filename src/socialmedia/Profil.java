@@ -38,7 +38,7 @@ public class Profil {
     }
 
     public void setAge(int age) {
-        this.age.setAge(age);
+        this.age.setValue(age);
     }
 
     public void setSalary(double salary) {
