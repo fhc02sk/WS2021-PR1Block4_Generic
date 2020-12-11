@@ -1,8 +1,8 @@
 package socialmedia;
 
-public class MayBe {
+public class MayBe <T> {
 
-    private int value; // speichert den eigentlichen Wert
+    private T value; // speichert den eigentlichen Wert
     private int status;
     /*
         1 ... nicht erfasst
@@ -14,7 +14,7 @@ public class MayBe {
     public static final int STATUS_SET_NOT_VISIBLE = 2;
     public static final int STATUS_SET_VISIBLE = 3;
 
-    public MayBe(int value, int status) {
+    public MayBe(T value, int status) {
         this.value = value;
         setStatus(status);
     }
@@ -44,7 +44,7 @@ public class MayBe {
         }
     }
 
-    public void setValue(int value) {
+    public void setValue(T value) {
         this.value = value;
     }
 
@@ -57,7 +57,7 @@ public class MayBe {
         }
     }
 
-    public int getValue() {
+    public T getValue() {
         return value;
     }
 
