@@ -20,14 +20,28 @@ public class MayBeInt {
     }
 
     public void print(){
-        if (status == STATUS_NOT_SET)
+ /*       if (status == STATUS_NOT_SET)
             System.out.println("Wert wurde nicht erfasst");
         else if (status == STATUS_SET_NOT_VISIBLE)
             System.out.println("Wert wurde erfasst, aber darf nicht ausgegeben werden!");
         else if (status == STATUS_SET_VISIBLE)
             System.out.println("Wert: " + age);
         else
-            System.out.println("Undefinierter Status");
+            System.out.println("Undefinierter Status");*/
+
+        switch (status){
+            case STATUS_NOT_SET:
+                System.out.println("Wert wurde nicht erfasst");
+                break;
+            case STATUS_SET_NOT_VISIBLE:
+                System.out.println("Wert wurde erfasst, aber darf nicht ausgegeben werden!");
+                break;
+            case STATUS_SET_VISIBLE:
+                System.out.println("Wert: " + age);
+                break;
+            default:
+                System.out.println("Undefinierter Status");
+        }
     }
 
     public void setAge(int age) {
