@@ -15,6 +15,17 @@ public class MayBeInt {
         setStatus(status);
     }
 
+    public void print(){
+        if (status == 1)
+            System.out.println("Wert wurde nicht erfasst");
+        else if (status == 2)
+            System.out.println("Wert wurde erfasst, aber darf nicht ausgegeben werden!");
+        else if (status == 3)
+            System.out.println("Wert: " + age);
+        else
+            System.out.println("Undefinierter Status");
+    }
+
     public void setAge(int age) {
         this.age = age;
     }
