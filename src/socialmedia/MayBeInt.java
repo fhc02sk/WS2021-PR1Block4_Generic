@@ -12,7 +12,7 @@ public class MayBeInt {
 
     public MayBeInt(int age, int status) {
         this.age = age;
-        this.status = status;
+        setStatus(status);
     }
 
     public void setAge(int age) {
@@ -20,7 +20,12 @@ public class MayBeInt {
     }
 
     public void setStatus(int status) {
-        this.status = status;
+        if (status >= 1 && status <= 3)
+            this.status = status;
+        else {
+            System.out.println("Dieser Status ist nicht erlaubt: " + status);
+            this.status = 1;
+        }
     }
 
     public int getAge() {
