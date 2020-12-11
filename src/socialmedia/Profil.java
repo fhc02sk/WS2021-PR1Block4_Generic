@@ -4,20 +4,24 @@ public class Profil {
     private String username;
     private String address;
 
-    private MayBeInt age;   // statt dem Datentyp int => MayBeInt
+    private MayBe age;   // statt dem Datentyp int => MayBeInt
+    private MayBe salary;
 
-    private double salary;
     private Profil bestFriend;
 
-    public Profil(String username, String address, int age, double salary) {
+    public Profil(String username, String address, int age, int salary) {
         this.username = username;
         this.address = address;
-        this.age = new MayBeInt(age, 2); // neues Objekt von MayBeInt
-        this.salary = salary;
+        this.age = new MayBe(age, MayBe.STATUS_SET_NOT_VISIBLE); // neues Objekt von MayBeInt
+        this.salary = new MayBe(salary, MayBe.STATUS_SET_NOT_VISIBLE);
     }
 
     public void changeAgeStatus(int status) {
         age.setStatus(status);
+    }
+
+    public void changeSalaryStatus(int status){
+        salary.setStatus(status);
     }
 
     public void printProfil() {
@@ -25,7 +29,8 @@ public class Profil {
         System.out.println("Address: " + address);
         System.out.print("Age: ");
         age.print();
-        System.out.println("Salary: " + salary);
+        System.out.print("Salary: ");
+        salary.print();
 
         if (bestFriend != null) {
             System.out.println("Username of BestFriend: " + bestFriend.username);
@@ -41,8 +46,8 @@ public class Profil {
         this.age.setValue(age);
     }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
+    public void setSalary(int salary) {
+        this.salary.setValue(salary);
     }
 
     public void setBestFriend(Profil bestFriend) {
